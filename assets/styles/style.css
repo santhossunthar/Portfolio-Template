@@ -43,6 +43,7 @@ body {
 }
 
 .main .home,
+.main .aboutme,
 .main .projects,
 .main .contact {
     width: 100%;
@@ -104,6 +105,8 @@ body {
 
 .intro > .header {
     font-size: 26pt;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .intro > .description {
@@ -153,17 +156,22 @@ body {
     height: 100%;
 }
 
-.projects {
+.aboutme,
+.projects,
+.contact {
     justify-content: center;
     align-items: center;
 }
 
-.projects > .container {
+.aboutme > .container,
+.projects > .container,
+.contact > .container {
     width: 80%;
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .container > .caption {
@@ -180,7 +188,61 @@ body {
     font-size: 14pt;
 }
 
+.container > .row {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row > .col {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.col > .caption {
+    background-color: var(--title);
+    display: flex;
+    width: 100%;
+    min-height: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--title-text);
+    border-radius: 1rem;
+    font-size: 14pt;
+}
+
+.col > .body {
+    width: 100%;
+    height: 100%;
+    margin-top: 1.5rem;
+    text-align: justify;
+    color: var(--title-text);
+}
+
+.about > .about-list {
+    list-style-type: none;
+}
+
+.about-list > .about-list-item {
+    padding: .5rem;
+}
+
+.container > .body {
+    width: 90%;
+}
+
 .body > .project-list {
+    width: 100%;
+    height: 100%;
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -211,6 +273,11 @@ body {
     height: 100%;
 }
 
+.card-img > img {
+    width: 100%;
+    height: 230px;
+}
+
 .card > .card-title {
     font-size: 16pt;
     color: var(--title-text);
@@ -236,20 +303,6 @@ body {
     font-weight: bold;
 }
 
-.contact {
-    justify-content: center;
-    align-items: center;
-}
-
-.contact > .container {
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .container > .caption {
     min-height: 10%;
 }
@@ -261,6 +314,9 @@ body {
     flex-direction: column;
     padding: 1rem 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
