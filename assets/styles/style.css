@@ -1,14 +1,14 @@
 :root {
-    --bg-main:hsla(207.8,31.3%,25.7%, 1);
+    --bg-main: hsla(207.8, 31.3%, 25.7%, 1);
     --bg-navbar-font: white;
-    --bg-nav-list-item: hsla(207.8,31.3%,25.7%, .4);
-    --bg-nav-list-item-hover: hsla(207.8,31.3%,10.7%, .8);
+    --bg-nav-list-item: hsla(207.8, 31.3%, 25.7%, 0.4);
+    --bg-nav-list-item-hover: hsla(207.8, 31.3%, 10.7%, 0.8);
 
-    --title: hsla(207.8,31.3%,10.7%, .8);
+    --title: hsla(207.8, 31.3%, 10.7%, 0.8);
     --title-text: white;
 
-    --btn: hsla(207.8,31.3%,10.7%, .8);
-    --btn-hover: hsla(207.8,31.3%,15.7%, .8);
+    --btn: hsla(207.8, 31.3%, 10.7%, 0.8);
+    --btn-hover: hsla(207.8, 31.3%, 15.7%, 0.8);
     --btn-text: white;
 }
 
@@ -19,7 +19,7 @@
 }
 
 html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -66,7 +66,7 @@ a {
     align-items: center;
 }
 
-.nav-list{
+.nav-list {
     position: relative;
     display: flex;
     list-style-type: none;
@@ -80,17 +80,17 @@ a {
 .nav-list > .nav-list-item {
     padding: 1.2rem;
     background-color: var(--bg-nav-list-item);
-    margin: 0 .3rem;
-    transition: .7s;
+    margin: 0 0.3rem;
+    transition: 0.7s;
     text-transform: uppercase;
     font-weight: bold;
-    transition: .7s;
+    transition: 0.7s;
 }
 
-.nav-list > .nav-list-item:hover{
+.nav-list > .nav-list-item:hover {
     font-size: 14pt;
     background-color: var(--bg-nav-list-item-hover);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
 }
 
 .nav-list-item > a {
@@ -134,8 +134,8 @@ a {
 .social-profiles a > img {
     width: 3rem;
     height: 3rem;
-    margin: 0 .5rem;
-    transition: .7s;
+    margin: 0 0.5rem;
+    transition: 0.7s;
 }
 
 .social-profiles a > img:hover {
@@ -242,7 +242,7 @@ a {
 }
 
 .about-list > .about-list-item {
-    padding: .5rem;
+    padding: 0.5rem;
 }
 
 .container > .body {
@@ -311,10 +311,10 @@ a {
 
 .card-body > .card-btn {
     width: 100%;
-    padding: .7rem;
-    border: none; 
+    padding: 0.7rem;
+    border: none;
     background-color: var(--title);
-    transition: .7s;
+    transition: 0.7s;
     margin: 0;
     color: var(--btn-text);
 }
@@ -343,7 +343,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .contact-form input,
@@ -351,19 +350,19 @@ a {
 .contact-form button {
     width: 100%;
     padding: 1rem;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     border: none;
-    border-radius: .7rem;
-    font-family: 'Segoe UI';
+    border-radius: 0.7rem;
+    font-family: "Segoe UI";
     outline: none;
-    transition: .7s;
+    transition: 0.7s;
 }
 
 .contact-form button {
     background-color: var(--btn);
     text-transform: uppercase;
     color: var(--btn-text);
-    transition: .7s;
+    transition: 0.7s;
 }
 
 .contact-form button:hover {
@@ -378,6 +377,25 @@ a {
 }
 
 @media (max-width: 880px) {
+    .main #home,
+    .main #aboutme,
+    .main #projects,
+    .main #contact {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        scroll-snap-align: start;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main #aboutme {
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+
     .nav-list {
         display: none;
     }
@@ -410,5 +428,57 @@ a {
     .content > .profile-img-card {
         width: 100%;
         margin-left: 1rem;
+    }
+
+    .aboutme {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .container {
+        min-width: 100%;
+        margin-top: 23rem;
+    }
+
+    .container > .row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .row > .col {
+        width: 100%;
+        height: 100%;
+    }
+
+    .col .caption,
+    .col .body {
+        scroll-snap-align: start;
+    }
+
+    .main #projects {
+        width: 100%;
+        overflow-y: scroll;
+    }
+    
+    .container > .caption {
+        margin-top: 3rem;
+    }
+
+    .container .body > .project-list {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        
+    }
+
+    .container .body .project-list > .project-list-item {
+        margin-top: 1rem;
+    }
+
+    .main #contact {
+        width: 100%;
     }
 }
