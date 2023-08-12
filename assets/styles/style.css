@@ -26,6 +26,10 @@ body {
     background-color: var(--bg-main);
 }
 
+a {
+    text-decoration: none;
+}
+
 .main {
     width: 100%;
     height: 100vh;
@@ -86,7 +90,6 @@ body {
 }
 
 .nav-list-item > a {
-    text-decoration: none;
     color: var(--bg-navbar-font);
 }
 
@@ -313,7 +316,6 @@ body {
 }
 
 .card-btn > a {
-    text-decoration: none;
     color: var(--btn-text);
 }
 
@@ -363,5 +365,10 @@ body {
 .contact-form button:hover {
     background-color: var(--btn-hover);
     margin: 1rem 0;
+    font-weight: bold;
+}
+
+.contact-form button > a {
+    color: var(--btn-text);
     font-weight: bold;
 }
