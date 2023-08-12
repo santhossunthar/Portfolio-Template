@@ -73,6 +73,10 @@ a {
     margin-right: 4rem;
 }
 
+.nav-list-icon {
+    display: none;
+}
+
 .nav-list > .nav-list-item {
     padding: 1.2rem;
     background-color: var(--bg-nav-list-item);
@@ -371,4 +375,40 @@ a {
 .contact-form button > a {
     color: var(--btn-text);
     font-weight: bold;
+}
+
+@media (max-width: 880px) {
+    .nav-list {
+        display: none;
+    }
+    .nav-list-icon {
+        display: inline-block;
+    }
+
+    .nav-list-icon > img {
+        width: 30px;
+    }
+
+    .content {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .content > .intro {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .intro > .description {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .content > .profile-img-card {
+        width: 100%;
+        margin-left: 1rem;
+    }
 }
