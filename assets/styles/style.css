@@ -481,4 +481,13 @@ a {
     .main #contact {
         width: 100%;
     }
+
+    #contact > .container {
+        margin: 0;
+        padding: 0;
+    }
+
+    #contact .container > .contact-form {
+        width: 100%;
+    }
 }
