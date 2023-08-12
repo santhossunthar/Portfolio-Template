@@ -312,6 +312,11 @@ body {
     color: var(--btn-text);
 }
 
+.card-btn > a {
+    text-decoration: none;
+    color: var(--btn-text);
+}
+
 .card-body > .card-btn:hover {
     background-color: var(--btn-hover);
     font-size: 12pt;
